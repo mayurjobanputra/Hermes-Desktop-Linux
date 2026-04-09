@@ -2,7 +2,7 @@
 
 A Linux-compatible desktop client for [Hermes](https://github.com/dodo-reach/hermes-desktop), built with Electron + TypeScript.
 
-Extracted from the macOS-native Swift app and rewritten for cross-platform use.
+Inspired by [hermes-desktop](https://github.com/dodo-reach/hermes-desktop) — I tried running it on Linux but it's not Linux-ready yet, so I decided to build this one.
 
 ## Architecture
 
