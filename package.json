@@ -1,0 +1,23 @@
+{
+  "name": "hermes-desktop-linux",
+  "version": "0.1.0",
+  "description": "Linux desktop client for Hermes over SSH",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron dist/main/main.js",
+    "dev": "tsc && electron dist/main/main.js"
+  },
+  "dependencies": {
+    "electron": "^33.0.0",
+    "node-pty": "^1.0.0",
+    "@xterm/xterm": "^5.5.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "uuid": "^11.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0"
+  }
+}

@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #1a1a2e;
+  --sidebar-bg: #16213e;
+  --text: #e0e0e0;
+  --text-muted: #8888aa;
+  --accent: #0f3460;
+  --accent-hover: #1a4a7a;
+  --highlight: #53c0b4;
+  --surface: #1e2a42;
+  --border: #2a3a5c;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+#sidebar {
+  width: 200px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+
+#sidebar h2 {
+  padding: 0 20px 16px;
+  font-size: 16px;
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+.nav-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-btn:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.nav-btn.active {
+  background: var(--accent);
+  color: var(--highlight);
+}
+
+/* Main content */
+#content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.section p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+}
+
+#btn-add-connection {
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#btn-add-connection:hover {
+  background: var(--accent-hover);
+}
+
+/* Terminal container */
+#terminal-container {
+  width: 100%;
+  height: calc(100vh - 140px);
+  background: #0d1117;
+  border-radius: 6px;
+  overflow: hidden;
+}

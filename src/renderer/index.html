@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <title>Hermes Desktop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <nav id="sidebar">
+      <h2>Hermes</h2>
+      <ul>
+        <li><button class="nav-btn active" data-section="connections">Connections</button></li>
+        <li><button class="nav-btn" data-section="overview">Overview</button></li>
+        <li><button class="nav-btn" data-section="files">Files</button></li>
+        <li><button class="nav-btn" data-section="sessions">Sessions</button></li>
+        <li><button class="nav-btn" data-section="terminal">Terminal</button></li>
+      </ul>
+    </nav>
+    <main id="content">
+      <section id="section-connections" class="section active">
+        <h3>Connections</h3>
+        <p>Manage your SSH connection profiles here.</p>
+        <div id="connections-list"></div>
+        <button id="btn-add-connection">+ Add Connection</button>
+      </section>
+      <section id="section-overview" class="section">
+        <h3>Overview</h3>
+        <p>Connect to a host to see remote Hermes discovery results.</p>
+        <div id="overview-content"></div>
+      </section>
+      <section id="section-files" class="section">
+        <h3>Files</h3>
+        <p>Edit USER.md, MEMORY.md, and SOUL.md on the remote host.</p>
+        <div id="files-content"></div>
+      </section>
+      <section id="section-sessions" class="section">
+        <h3>Sessions</h3>
+        <p>Browse Hermes conversation history.</p>
+        <div id="sessions-content"></div>
+      </section>
+      <section id="section-terminal" class="section">
+        <h3>Terminal</h3>
+        <p>Interactive SSH terminal. (Requires xterm.js + node-pty integration.)</p>
+        <div id="terminal-container"></div>
+      </section>
+    </main>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
